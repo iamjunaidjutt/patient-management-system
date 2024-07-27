@@ -3,7 +3,6 @@
 import Image from "next/image";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
-import E164Number from "react-phone-number-input/input";
 
 import {
 	FormControl,
@@ -95,7 +94,7 @@ const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
 						placeholder={placeholder}
 						international
 						withCountryCallingCode
-						value={field.value as E164Number | undefined}
+						value={field.value as string | undefined}
 						onChange={field.onChange}
 						className="input-phone"
 					/>
